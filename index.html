@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BUMDes Singa Barong</title>
+
+<style>
+:root{
+  --primary:#0f766e;
+  --secondary:#134e4a;
+  --light:#f0fdfa;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',sans-serif;
+}
+
+body{
+  background:#fafafa;
+  color:#333;
+  line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#fff;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 40px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.brand img{
+  width:80px;
+  height:80px;
+  object-fit:cover;
+}
+
+.brand span{
+  font-size:1.8rem;
+  font-weight:800;
+  color:var(--primary);
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#333;
+  font-weight:600;
+}
+
+nav a:hover{ color:var(--primary); }
+
+/* ================= HERO ================= */
+.hero{
+  background:
+    linear-gradient(rgba(130,130,130,.65),rgba(130,130,130,.65)),
+    url("assets/background profil.jpeg") center/cover no-repeat;
+  color:#fff;
+  padding:160px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:3.2rem;
+  margin-bottom:20px;
+  text-shadow:0 4px 15px rgba(0,0,0,.8);
+}
+
+.hero p{
+  max-width:900px;
+  margin:auto;
+  font-size:1.25rem;
+}
+
+/* ================= SECTION ================= */
+.section{
+  padding:80px 40px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:45px;
+  color:var(--primary);
+  font-size:2.2rem;
+}
+
+/* ================= HOME ================= */
+.home-card{
+  margin-bottom:40px;
+}
+
+.home-card p{
+  text-align:justify;
+  margin-top:15px;
+}
+
+.keunggulan{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:20px;
+}
+
+.keunggulan div{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:var(--light);
+  padding:16px 18px;
+  border-radius:12px;
+  font-weight:600;
+  box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+
+/* ================= PROFIL ================= */
+.card{
+  background:#fff;
+  padding:35px;
+  border-radius:14px;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.profil-table td{
+  padding:10px 0;
+  vertical-align:top;
+}
+
+.profil-table td:first-child{
+  width:220px;
+  font-weight:600;
+}
+
+.visi-misi{
+  margin-top:40px;
+  text-align:center;
+}
+
+.visi-misi h3{
+  color:var(--primary);
+  margin-bottom:15px;
+}
+
+.visi-misi p{
+  margin-bottom:20px;
+  text-align:justify;
+}
+
+/* Visi saja rata tengah, misi tetap justify */
+.visi-misi h3:first-of-type + p {
+  text-align: center;
+}
+
+.direktur{
+  text-align:center;
+  margin-top:40px;
+}
+
+.direktur img{
+  width:200px;
+  height:200px;
+  object-fit:cover;
+  border-radius:50%;
+  border:5px solid var(--primary);
+  margin-bottom:15px;
+  margin: 0 auto;
+}
+
+/* ================= UNIT USAHA ================= */
+.unit-usaha{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+}
+
+.unit-card{
+  background:#fff;
+  padding:25px;
+  border-radius:14px;
+  box-shadow:0 6px 15px rgba(0,0,0,.07);
+}
+
+.unit-card h3{
+  color:var(--primary);
+  margin-bottom:12px;
+}
+
+.unit-card p{
+  margin-bottom:20px;
+  text-align: justify;
+}
+
+.unit-galeri{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.unit-galeri img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* ================= PRODUK ================= */
+.produk{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.produk-card{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,.07);
+}
+
+.produk-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.produk-card h4{
+  margin:15px 0 5px;
+}
+
+.harga{
+  color:var(--primary);
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+/* ================= KINERJA ================= */
+.data{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.data div{
+  background:var(--light);
+  padding:25px;
+  border-radius:14px;
+  text-align:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+/* ================= FORM ================= */
+form{
+  max-width:500px;
+  margin:auto;
+  background:#fff;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 6px 20px rgba(0,0,0,.1);
+}
+
+input, textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  background:var(--primary);
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+button:hover{ background:var(--secondary); }
+
+/* ================= FOOTER ================= */
+footer{
+  background:#0f172a;
+  color:#fff;
+  padding:40px 20px;
+  margin-top:60px;
+}
+
+.footer-content{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.footer-section h4{
+  margin-bottom:15px;
+  color:var(--primary);
+}
+
+.footer-section p, .footer-section a{
+  color:#ccc;
+  text-decoration:none;
+  line-height:1.8;
+}
+
+.footer-section a:hover{
+  color:#fff;
+}
+
+.social-icons{
+  display:flex;
+  gap:15px;
+  margin-top:10px;
+}
+
+.social-icons a{
+  font-size:1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover{
+  color:var(--primary);
+}
+
+.copyright{
+  text-align:center;
+  margin-top:20px;
+  padding-top:20px;
+  border-top:1px solid #444;
+  grid-column:1 / -1;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="assets/logobumdes.png">
+    <span>BUMDes Singa Barong</span>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#profil">Profil</a>
+    <a href="#unit">Unit Usaha</a>
+    <a href="#produk">Produk</a>
+    <a href="#kinerja">Kinerja</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>BUMDes Singa Barong</h1>
+  <p>
+    Mendorong Kemandirian Ekonomi Desa Melalui Pengelolaan
+    Usaha Produktif, Berkelanjutan, dan Berbasis Potensi Lokal.
+  </p>
+</section>
+
+<section class="section">
+  <div class="home-card">
+    <h3>Tentang Singkat BUMDes</h3>
+    <p>
+      BUMDes Singa Barong merupakan Badan Usaha Milik Desa Kebarongan
+      yang berdiri sejak tahun 2019 sebagai penggerak ekonomi desa.
+      BUMDes ini mengelola berbagai unit usaha strategis untuk
+      meningkatkan pendapatan desa, membuka lapangan kerja,
+      dan mendukung kesejahteraan masyarakat secara berkelanjutan.
+    </p>
+  </div>
+
+  <div class="home-card">
+    <h3>Keunggulan BUMDes</h3>
+    <div class="keunggulan">
+      <div>♻️ Berbasis Potensi Lokal</div>
+      <div>👥 Pemberdayaan Masyarakat</div>
+      <div>🏭 Multi Unit Usaha</div>
+      <div>💰 Kontribusi PAD Desa</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="profil">
+<h2>Profil Perusahaan</h2>
+<div class="card">
+<table class="profil-table">
+<tr><td>Nama</td><td>: BUMDes Singa Barong</td></tr>
+<tr><td>Tahun Berdiri</td><td>: 10 Januari 2019</td></tr>
+<tr><td>Alamat</td><td>: Desa Kebarongan, Kecamatan Kemranjen, Kabupaten Banyumas, Jawa Tengah</td></tr>
+<tr><td>Bidang Usaha</td><td>: Jasa & Pengelolaan Unit Usaha Desa</td></tr>
+</table>
+
+<div class="visi-misi">
+<h3>Visi Bumdes</h3>
+<p>Mewujudkan kemandirian dan kesejahteraan desa melalui pembangunan ekonomi yang bermartabat.</p>
+<h3>Misi Bumdes</h3>
+<p>1. Meningkatkan Pendapatan Asli Desa (PAD).</p>
+<p>2. Mengelola Potensi Desa agar dapat dimanfaatkan sebaiknya untuk kesejahteraan masyarakat.</p>
+<p>3. Menjalani kerjasama dengan pihak lain untuk kemajuan BUMDes Kebarongan.</p>
+<p>4. Pemanfaatan Teknologi tepat guna dalamunjang produktivitas masyarakat.</p>
+<p>5. Menciptakan lapangan pekerjaan.</p>
+<p>6. Memberikan pelayanan yang maksimal.</p>
+<p>7. Menjadi pelopor pembangunan ekonomi Desa yang berorientasi pada pelestarian lingkungan hidup.</p>
+</div>
+
+<div class="direktur">
+<img src="assets/direktur bumdes.jpeg">
+<h3>Syafi'i</h3>
+<p>Direktur BUMDes Singa Barong</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="unit">
+<h2>Unit Usaha BUMDes</h2>
+<div class="unit-usaha">
+  <div class="unit-card">
+    <h3>Pabrik Limbah Plastik</h3>
+    <p>
+      Unit usaha pengolahan limbah plastik menjadi produk rumah tangga
+      bernilai guna, sekaligus mendukung program ekonomi sirkular desa.
+    </p>
+    <div class="unit-galeri">
+      <img src="assets/proses 1.jpeg" alt="Proses Produksi 1">
+      <img src="assets/proses 2.jpeg" alt="Proses Produksi 2">
+      <img src="assets/proses 3.jpeg" alt="Proses Produksi 3">
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <h3>Gedung Serbaguna</h3>
+    <p>
+      Gedung multifungsi yang digunakan untuk kegiatan olahraga,
+      acara masyarakat, pertemuan, serta kegiatan sosial dan ekonomi desa.
+    </p>
+    <div class="unit-galeri">
+      <img src="assets/foto depan gedung.jpeg" alt="Foto Gedung Serbaguna 1">
+      <img src="assets/lapangan 1.jpeg" alt="Foto Gedung Serbaguna 2">
+      <img src="assets/lapangan 2.jpeg" alt="Foto Gedung Serbaguna 3">
+    </div>
+  </div>
+
+  <div class="unit-card">
+    <h3>Oven Padi & Rice Mill</h3>
+    <p>
+      Unit usaha pengolahan hasil pertanian berupa pengeringan padi
+      dan penggilingan beras yang saat ini masih dalam tahap
+      proses pengadaan untuk mendukung petani lokal.
+    </p>
+    <div class="unit-galeri">
+      <img src="assets/rice mill 1.jpeg" alt="Foto Oven Padi 1">
+      <img src="assets/rice mill 2.jpeg" alt="Foto Oven Padi 2">
+      <img src="assets/rice mill 3.jpeg" alt="Foto Oven Padi 3">
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="produk">
+<h2>Produk Limbah Plastik</h2>
+<div class="produk">
+<div class="produk-card"><img src="assets/lakop.png"><h4>Lakop Sapu</h4><p class="harga">Rp 750</p></div>
+<div class="produk-card"><img src="assets/gayung.png"><h4>Gayung</h4><p class="harga">Rp 2.500</p></div>
+<div class="produk-card"><img src="assets/baskom.png"><h4>Baskom</h4><p class="harga">Rp 4.000</p></div>
+<div class="produk-card"><img src="assets/bola plastik kecil.png"><h4>Bola Plastik</h4><p class="harga">Rp 500</p></div>
+<div class="produk-card"><img src="assets/mainan buah.png"><h4>Mainan Anak</h4><p class="harga">Rp 500</p></div>
+<div class="produk-card"><img src="assets/ember cor.png"><h4>Ember Cor</h4><p class="harga">Rp 4.000-4.500</p></div>
+<div class="produk-card"><img src="assets/pot.png"><h4>Pot</h4><p class="harga">Rp 4.000</p></div>
+</div>
+</section>
+
+<section class="section" id="kinerja">
+<h2>Kinerja Usaha</h2>
+<div class="data">
+<div><b>Omset / Tahun</b><br>± Rp1 M</div>
+<div><b>Laba Bersih</b><br>± Rp150 Juta</div>
+<div><b>Total Aset</b><br>Rp1,7 M</div>
+<div><b>Tenaga Kerja</b><br>40+ Orang</div>
+</div>
+</section>
+
+<section class="section" id="kontak">
+<h2>Kontak & Pemesanan</h2>
+<form onsubmit="kirimWA(event)">
+<input id="nama" placeholder="Nama" required>
+<input id="produkInput" placeholder="Produk / Unit Usaha" required>
+<input id="jumlah" placeholder="Jumlah / Keterangan" required>
+<textarea id="pesan" placeholder="Catatan"></textarea>
+<button>Kirim via WhatsApp</button>
+</form>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Kontak Kami</h4>
+      <p><strong>Alamat:</strong> Desa Kebarongan, Kecamatan Kemranjen, Kabupaten Banyumas, Jawa Tengah</p>
+      <p><strong>Telepon:</strong> 6285799999142</p>
+    </div>
+    <div class="footer-section">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="https://instagram.com/singabarongkebarongan" target="_blank" aria-label="Instagram">📷 Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 BUMDes Singa Barong | Desa Kebarongan. Semua hak dilindungi.
+    </div>
+  </div>
+</footer>
+
+<script>
+function kirimWA(e){
+  e.preventDefault();
+  const text =
+`Halo BUMDes Singa Barong
+Nama: ${nama.value}
+Produk/Unit: ${produkInput.value}
+Jumlah/Ket: ${jumlah.value}
+Catatan: ${pesan.value}`;
+
+  // Format nomor: gunakan angka saja tanpa tanda dash
+  // 6283840284774 adalah format yang benar untuk WhatsApp
+  window.open("https://wa.me/6285799999142?text="+encodeURIComponent(text));
+}
+</script>
+
+</body>
+</html>
