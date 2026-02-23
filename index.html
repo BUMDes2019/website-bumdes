@@ -292,7 +292,6 @@ button{
   border:none;
   border-radius:8px;
   cursor:pointer;
-  font-weight:600;
 }
 
 button:hover{ background:var(--secondary); }
@@ -349,207 +348,6 @@ footer{
   padding-top:20px;
   border-top:1px solid #444;
   grid-column:1 / -1;
-}
-
-/* ============================================
-   RESPONSIVE DESIGN - LAPTOP & HP
-   ============================================ */
-
-/* Untuk Tablet (max-width: 1024px) */
-@media screen and (max-width: 1024px) {
-  .section{
-    padding:60px 30px;
-  }
-  
-  .hero h1{
-    font-size:2.5rem;
-  }
-  
-  h2{
-    font-size:1.8rem;
-  }
-}
-
-/* Untuk HP (max-width: 768px) */
-@media screen and (max-width: 768px) {
-  
-  /* Header */
-  header{
-    padding:10px 15px;
-    flex-direction:column;
-    gap:10px;
-  }
-  
-  .brand{
-    justify-content:center;
-  }
-  
-  .brand img{
-    width:50px;
-    height:50px;
-  }
-  
-  .brand span{
-    font-size:1.3rem;
-  }
-  
-  nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:8px;
-  }
-  
-  nav a{
-    margin:5px 8px;
-    font-size:0.8rem;
-  }
-  
-  /* Hero */
-  .hero{
-    padding:100px 15px;
-  }
-  
-  .hero h1{
-    font-size:1.8rem;
-  }
-  
-  .hero p{
-    font-size:0.95rem;
-  }
-  
-  /* Section */
-  .section{
-    padding:40px 15px;
-  }
-  
-  h2{
-    font-size:1.5rem;
-    margin-bottom:30px;
-  }
-  
-  /* Home - Keunggulan */
-  .keunggulan{
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-  
-  .keunggulan div{
-    padding:12px;
-    font-size:0.8rem;
-    flex-direction:column;
-    text-align:center;
-  }
-  
-  /* Profil */
-  .card{
-    padding:20px;
-    overflow-x:auto;
-  }
-  
-  .profil-table td:first-child{
-    width:130px;
-  }
-  
-  .direktur img{
-    width:160px;
-    height:160px;
-  }
-  
-  /* Unit Usaha */
-  .unit-usaha{
-    grid-template-columns:1fr;
-    gap:20px;
-  }
-  
-  .unit-card{
-    padding:20px;
-  }
-  
-  .unit-galeri{
-    grid-template-columns:repeat(3, 1fr);
-    gap:8px;
-  }
-  
-  .unit-galeri img{
-    height:90px;
-  }
-  
-  /* Produk - JANGAN DIHAPUS */
-  .produk{
-    grid-template-columns:repeat(2, 1fr);
-    gap:15px;
-  }
-  
-  .produk-card img{
-    height:130px;
-  }
-  
-  .produk-card h4{
-    font-size:0.9rem;
-  }
-  
-  .harga{
-    font-size:0.9rem;
-  }
-  
-  /* Kinerja */
-  .data{
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-  
-  .data div{
-    padding:18px;
-  }
-  
-  /* Form */
-  form{
-    padding:20px;
-  }
-  
-  /* Footer */
-  .footer-content{
-    grid-template-columns:1fr;
-    text-align:center;
-  }
-  
-  .social-icons{
-    justify-content:center;
-  }
-}
-
-/* Untuk HP Kecil (max-width: 480px) */
-@media screen and (max-width: 480px) {
-  
-  .brand span{
-    font-size:1.1rem;
-  }
-  
-  .hero h1{
-    font-size:1.5rem;
-  }
-  
-  .keunggulan{
-    grid-template-columns:1fr;
-  }
-  
-  .produk{
-    grid-template-columns:repeat(2, 1fr);
-    gap:12px;
-  }
-  
-  .unit-galeri{
-    grid-template-columns:repeat(2, 1fr);
-  }
-  
-  .data{
-    grid-template-columns:1fr;
-  }
-  
-  .footer-section p{
-    font-size:0.9rem;
-  }
 }
 </style>
 </head>
@@ -628,7 +426,7 @@ footer{
 <div class="direktur">
 <img src="assets/direktur bumdes.jpeg">
 <h3>Syafi'i</h3>
-<p>Directeur BUMDes Singa Barong</p>
+<p>Direktur BUMDes Singa Barong</p>
 </div>
 </div>
 </section>
@@ -679,4 +477,73 @@ footer{
 </section>
 
 <section class="section" id="produk">
-<h2>Produk Limbah Plastik</h2
+<h2>Produk Limbah Plastik</h2>
+<div class="produk">
+<div class="produk-card"><img src="assets/lakop.png"><h4>Lakop Sapu</h4><p class="harga">Rp 750</p></div>
+<div class="produk-card"><img src="assets/gayung.png"><h4>Gayung</h4><p class="harga">Rp 2.500</p></div>
+<div class="produk-card"><img src="assets/baskom.png"><h4>Baskom</h4><p class="harga">Rp 4.000</p></div>
+<div class="produk-card"><img src="assets/bola plastik kecil.png"><h4>Bola Plastik</h4><p class="harga">Rp 500</p></div>
+<div class="produk-card"><img src="assets/mainan buah.png"><h4>Mainan Anak</h4><p class="harga">Rp 500</p></div>
+<div class="produk-card"><img src="assets/ember cor.png"><h4>Ember Cor</h4><p class="harga">Rp 4.000-4.500</p></div>
+<div class="produk-card"><img src="assets/pot.png"><h4>Pot</h4><p class="harga">Rp 4.000</p></div>
+</div>
+</section>
+
+<section class="section" id="kinerja">
+<h2>Kinerja Usaha</h2>
+<div class="data">
+<div><b>Omset / Tahun</b><br>± Rp1 M</div>
+<div><b>Laba Bersih</b><br>± Rp150 Juta</div>
+<div><b>Total Aset</b><br>Rp1,7 M</div>
+<div><b>Tenaga Kerja</b><br>40+ Orang</div>
+</div>
+</section>
+
+<section class="section" id="kontak">
+<h2>Kontak & Pemesanan</h2>
+<form onsubmit="kirimWA(event)">
+<input id="nama" placeholder="Nama" required>
+<input id="produkInput" placeholder="Produk / Unit Usaha" required>
+<input id="jumlah" placeholder="Jumlah / Keterangan" required>
+<textarea id="pesan" placeholder="Catatan"></textarea>
+<button>Kirim via WhatsApp</button>
+</form>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>Kontak Kami</h4>
+      <p><strong>Alamat:</strong> Desa Kebarongan, Kecamatan Kemranjen, Kabupaten Banyumas, Jawa Tengah</p>
+      <p><strong>Telepon:</strong> 6285799999142</p>
+    </div>
+    <div class="footer-section">
+      <h4>Ikuti Kami</h4>
+      <div class="social-icons">
+        <a href="https://instagram.com/singabarongkebarongan" target="_blank" aria-label="Instagram">📷 Instagram</a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2026 BUMDes Singa Barong | Desa Kebarongan. Semua hak dilindungi.
+    </div>
+  </div>
+</footer>
+
+<script>
+function kirimWA(e){
+  e.preventDefault();
+  const text =
+`Halo BUMDes Singa Barong
+Nama: ${nama.value}
+Produk/Unit: ${produkInput.value}
+Jumlah/Ket: ${jumlah.value}
+Catatan: ${pesan.value}`;
+
+  // Format nomor: gunakan angka saja tanpa tanda dash
+  // 6283840284774 adalah format yang benar untuk WhatsApp
+  window.open("https://wa.me/6285799999142?text="+encodeURIComponent(text));
+}
+</script>
+
+</body>
+</html>
