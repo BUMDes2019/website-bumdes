@@ -5,351 +5,376 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BUMDes Singa Barong</title>
 
-<style>
 :root{
-  --primary:#0f766e;
-  --secondary:#134e4a;
-  --light:#f0fdfa;
+    --primary:#0f766e;
+    --secondary:#134e4a;
+    --light:#f0fdfa;
 }
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-  background:#fafafa;
-  color:#333;
-  line-height:1.6;
+    background:#fafafa;
+    color:#333;
+    line-height:1.6;
 }
 
 /* ================= HEADER ================= */
 header{
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:#fff;
-  box-shadow:0 4px 10px rgba(0,0,0,.08);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:14px 40px;
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#fff;
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 20px;
 }
 
 .brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .brand img{
-  width:80px;
-  height:80px;
-  object-fit:cover;
+    width:50px;
+    height:50px;
+    object-fit:cover;
 }
 
 .brand span{
-  font-size:1.8rem;
-  font-weight:800;
-  color:var(--primary);
+    font-size:1.2rem;
+    font-weight:800;
+    color:var(--primary);
 }
 
 nav a{
-  margin-left:20px;
-  text-decoration:none;
-  color:#333;
-  font-weight:600;
+    margin-left:10px;
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    font-size:0.85rem;
 }
 
 nav a:hover{ color:var(--primary); }
 
 /* ================= HERO ================= */
 .hero{
-  background:
-    linear-gradient(rgba(130,130,130,.65),rgba(130,130,130,.65)),
-    url("assets/background profil.jpeg") center/cover no-repeat;
-  color:#fff;
-  padding:160px 20px;
-  text-align:center;
+    background:
+        linear-gradient(rgba(130,130,130,.65),rgba(130,130,130,.65)),
+        url("assets/background profil.jpeg") center/cover no-repeat;
+    color:#fff;
+    padding:100px 20px;
+    text-align:center;
 }
 
 .hero h1{
-  font-size:3.2rem;
-  margin-bottom:20px;
-  text-shadow:0 4px 15px rgba(0,0,0,.8);
+    font-size:2rem;
+    margin-bottom:15px;
+    text-shadow:0 4px 15px rgba(0,0,0,.8);
 }
 
 .hero p{
-  max-width:900px;
-  margin:auto;
-  font-size:1.25rem;
+    max-width:900px;
+    margin:auto;
+    font-size:1rem;
 }
 
 /* ================= SECTION ================= */
 .section{
-  padding:80px 40px;
-  max-width:1200px;
-  margin:auto;
+    padding:40px 20px;
+    max-width:1200px;
+    margin:auto;
 }
 
 h2{
-  text-align:center;
-  margin-bottom:45px;
-  color:var(--primary);
-  font-size:2.2rem;
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--primary);
+    font-size:1.6rem;
 }
 
 /* ================= HOME ================= */
 .home-card{
-  margin-bottom:40px;
+    margin-bottom:30px;
 }
 
 .home-card p{
-  text-align:justify;
-  margin-top:15px;
+    text-align:justify;
+    margin-top:10px;
 }
 
 .keunggulan{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
-  margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px;
+    margin-top:15px;
 }
 
 .keunggulan div{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  background:var(--light);
-  padding:16px 18px;
-  border-radius:12px;
-  font-weight:600;
-  box-shadow:0 4px 10px rgba(0,0,0,.08);
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--light);
+    padding:12px;
+    border-radius:10px;
+    font-weight:600;
+    font-size:0.85rem;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
 /* ================= PROFIL ================= */
 .card{
-  background:#fff;
-  padding:35px;
-  border-radius:14px;
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    overflow-x:auto;
+}
+
+.profil-table{
+    width:100%;
 }
 
 .profil-table td{
-  padding:10px 0;
-  vertical-align:top;
+    padding:8px 0;
+    vertical-align:top;
+    font-size:0.9rem;
 }
 
 .profil-table td:first-child{
-  width:220px;
-  font-weight:600;
+    width:120px;
+    font-weight:600;
 }
 
 .visi-misi{
-  margin-top:40px;
-  text-align:center;
+    margin-top:30px;
+    text-align:center;
 }
 
 .visi-misi h3{
-  color:var(--primary);
-  margin-bottom:15px;
+    color:var(--primary);
+    margin-bottom:10px;
+    font-size:1.1rem;
 }
 
 .visi-misi p{
-  margin-bottom:20px;
-  text-align:justify;
+    margin-bottom:15px;
+    text-align:justify;
+    font-size:0.9rem;
 }
 
 /* Visi saja rata tengah, misi tetap justify */
 .visi-misi h3:first-of-type + p {
-  text-align: center;
+    text-align: center;
 }
 
 .direktur{
-  text-align:center;
-  margin-top:40px;
+    text-align:center;
+    margin-top:30px;
 }
 
 .direktur img{
-  width:200px;
-  height:200px;
-  object-fit:cover;
-  border-radius:50%;
-  border:5px solid var(--primary);
-  margin-bottom:15px;
-  margin: 0 auto;
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid var(--primary);
+    margin-bottom:10px;
+}
+
+.direktur h3{
+    font-size:1.1rem;
+}
+
+.direktur p{
+    font-size:0.9rem;
 }
 
 /* ================= UNIT USAHA ================= */
 .unit-usaha{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:25px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
 }
 
 .unit-card{
-  background:#fff;
-  padding:25px;
-  border-radius:14px;
-  box-shadow:0 6px 15px rgba(0,0,0,.07);
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
 }
 
 .unit-card h3{
-  color:var(--primary);
-  margin-bottom:12px;
+    color:var(--primary);
+    margin-bottom:10px;
+    font-size:1.1rem;
 }
 
 .unit-card p{
-  margin-bottom:20px;
-  text-align: justify;
+    margin-bottom:15px;
+    text-align: justify;
+    font-size:0.9rem;
 }
 
 .unit-galeri{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
-  margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+    margin-top:15px;
 }
 
 .unit-galeri img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:8px;
+    width:100%;
+    height:100px;
+    object-fit:cover;
+    border-radius:8px;
 }
 
 /* ================= PRODUK ================= */
 .produk{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
 }
 
 .produk-card{
-  background:#fff;
-  border-radius:14px;
-  overflow:hidden;
-  text-align:center;
-  box-shadow:0 6px 15px rgba(0,0,0,.07);
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
 }
 
 .produk-card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
+    width:100%;
+    height:120px;
+    object-fit:cover;
 }
 
 .produk-card h4{
-  margin:15px 0 5px;
+    margin:10px 0 5px;
+    font-size:0.9rem;
 }
 
 .harga{
-  color:var(--primary);
-  font-weight:700;
-  margin-bottom:15px;
+    color:var(--primary);
+    font-weight:700;
+    margin-bottom:10px;
+    font-size:0.85rem;
 }
 
 /* ================= KINERJA ================= */
 .data{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:15px;
 }
 
 .data div{
-  background:var(--light);
-  padding:25px;
-  border-radius:14px;
-  text-align:center;
-  box-shadow:0 4px 12px rgba(0,0,0,.08);
+    background:var(--light);
+    padding:20px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    font-size:0.9rem;
 }
 
 /* ================= FORM ================= */
 form{
-  max-width:500px;
-  margin:auto;
-  background:#fff;
-  padding:30px;
-  border-radius:16px;
-  box-shadow:0 6px 20px rgba(0,0,0,.1);
+    max-width:100%;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
 }
 
 input, textarea{
-  width:100%;
-  padding:12px;
-  margin-bottom:15px;
-  border-radius:8px;
-  border:1px solid #ccc;
+    width:100%;
+    padding:12px;
+    margin-bottom:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:1rem;
 }
 
 button{
-  width:100%;
-  padding:14px;
-  background:var(--primary);
-  color:#fff;
-  border:none;
-  border-radius:8px;
-  cursor:pointer;
+    width:100%;
+    padding:14px;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
 }
 
 button:hover{ background:var(--secondary); }
 
 /* ================= FOOTER ================= */
 footer{
-  background:#0f172a;
-  color:#fff;
-  padding:40px 20px;
-  margin-top:60px;
+    background:#0f172a;
+    color:#fff;
+    padding:30px 20px;
+    margin-top:40px;
 }
 
 .footer-content{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+    text-align:center;
 }
 
 .footer-section h4{
-  margin-bottom:15px;
-  color:var(--primary);
+    margin-bottom:12px;
+    color:var(--primary);
 }
 
 .footer-section p, .footer-section a{
-  color:#ccc;
-  text-decoration:none;
-  line-height:1.8;
+    color:#ccc;
+    text-decoration:none;
+    line-height:1.6;
+    font-size:0.9rem;
 }
 
 .footer-section a:hover{
-  color:#fff;
+    color:#fff;
 }
 
 .social-icons{
-  display:flex;
-  gap:15px;
-  margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:10px;
 }
 
 .social-icons a{
-  font-size:1.5rem;
-  transition: color 0.3s ease;
+    font-size:1.2rem;
+    transition: color 0.3s ease;
 }
 
 .social-icons a:hover{
-  color:var(--primary);
+    color:var(--primary);
 }
 
 .copyright{
-  text-align:center;
-  margin-top:20px;
-  padding-top:20px;
-  border-top:1px solid #444;
-  grid-column:1 / -1;
+    text-align:center;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #444;
 }
-</style>
 </head>
 
 <body>
